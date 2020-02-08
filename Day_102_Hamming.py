@@ -1,5 +1,5 @@
 """
-Day 101 - Hamming Distance
+Day 102 - Hamming Distance
 
 Exercism
 
