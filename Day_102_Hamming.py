@@ -26,12 +26,9 @@ The Hamming distance is only defined for sequences of equal length, so an attemp
 # solution
 def distance(strand_a, strand_b):
     if len(strand_a) != len(strand_b):
-        raise ValueError('Incorrect length of input')
-    count = 0
-    for i,j in zip(strand_a, strand_b):
-        if i != j:
-            count += 1
-    return count
+        raise ValueError('Incorrect length of input.')    
+    return sum([1 for i,j in zip(strand_a, strand_b) if i != j])
+
 
 
 if __name__ == "__main__":
