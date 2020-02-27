@@ -1,7 +1,7 @@
 """
 Day 112 - Leap Year
 
-Exercism
+Exercism - Easy
 
 Given a year, report if it is a leap year.
 
