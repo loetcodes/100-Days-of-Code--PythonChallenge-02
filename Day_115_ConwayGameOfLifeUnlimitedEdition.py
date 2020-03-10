@@ -20,5 +20,21 @@ print(htmlize(cells))
 
 #!/bin/python3
 
+def get_value(state, neighbors):
+    cells = neighbors
+    count = sum(neighbors)
+    if state and (count < 2 or count > 3): # Live cell dies
+        return 0
+    elif count == 3 and state == 0: # Dead cell comes alive
+        return 1
+    return state
+
+
+def get_generation(cells, generations):
+    rows, cols = len(cells), len(cells[0])
+    final = []
+    curr = [item for item in cells]
+    
+    return final
 
 if __name__ == "__main__":
