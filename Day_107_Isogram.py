@@ -23,14 +23,12 @@ import unittest
 
 def is_isogram(string):
   if len(string) <= 1:
-    return True  
-  repeats = 0
-  chars = string.replace(" ", "-").lower()
-  allowed_repeats = chars.count("-")
-  unique_chars = set(chars)
-  if allowed_repeats:
-    repeats = 1
-  return (len(chars) - allowed_repeats) == (len(unique_chars) - repeats)
+    return True
+  
+  all_chars = "".join(char for char in string.lower() if char != " " and char != "-")
+  unique_chars = set(all_chars)
+  return len(all_chars) == len(unique_chars)
+
 
 
 
