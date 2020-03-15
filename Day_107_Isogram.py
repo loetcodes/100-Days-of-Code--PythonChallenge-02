@@ -22,13 +22,9 @@ Sometimes it is necessary to raise an exception. When you do this, you should in
 import unittest
 
 def is_isogram(string):
-  if len(string) <= 1:
-    return True
-  
-  all_chars = "".join(char for char in string.lower() if char != " " and char != "-")
+  all_chars = [char for char in string.lower() if char != " " and char != "-"]
   unique_chars = set(all_chars)
   return len(all_chars) == len(unique_chars)
-
 
 
 
