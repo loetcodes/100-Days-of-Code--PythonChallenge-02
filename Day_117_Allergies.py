@@ -52,5 +52,6 @@ class Allergies:
     return [food for food, value in self.allergens.items() if self.score & value]
 
 
+
 if __name__ == "__main__":
 	
