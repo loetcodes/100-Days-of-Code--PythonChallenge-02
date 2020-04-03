@@ -55,6 +55,6 @@ if __name__ == "__main__":
 	word, size = input().split()
 	sorted_word = sorted(list(word))
 	for i in range(1, int(size) + 1):
-	    combos = ["".join(char) for char in list(combinations(sorted_word, int(i)))]
-	    for char in combos:
-	        print(char)
+		combos = ["".join(char) for char in list(combinations(sorted_word, int(i)))]
+		for char in combos:
+			print(char)
