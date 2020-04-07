@@ -43,6 +43,7 @@ def recite(start_verse, end_verse):
   for i in range(start_verse, end_verse + 1):
     start_lyric = "On the " + days_count[i - 1] + " day of Christmas my true love gave to me: "
     verses = start_lyric + ", ".join(days_gift[i - 1: 0: -1]) + ", and " * (i >= 2) + days_gift[0]
+    verses = start_lyric + ", ".join(days_gift[i - 1: 0: -1]) + ", and " * (1 if i >= 2 else 0) + days_gift[0]
     lyrics.append(verses)
   return lyrics
 
